@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tela Principal</title>
+    <link rel="stylesheet" href="telaInicial.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Menu lateral -->
+        <div class="menu-total">
+            <nav class="menu-lateral">
+                <div class="logo">
+                    <img src="ImagensLogin/logoSchoolWilson.png" alt="Logo da escola">
+                </div>
+                <div class="botoes">
+                    <button class="active"><a href="telaInicial.html">Tela Inicial</a></button>
+                    <button><a href="boletim.html">Ver Boletim</a></button>
+                    <button><a href="presenca.html">Presença em Aulas</a></button>
+                    <button><a href="calendario.html">Calendário Escolar</a></button>
+                    <button><a href="planoDeEnsino.html">Plano de Ensino</a></button>
+                    <button><a href="horarioEscolar.html">Horário Escolar</a></button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="conteudo">
+            <div class="banner">
+                <img src="ImagensLogin/banner.png" alt="Banner Pensamento Computacional">
+            </div>
+
+            <div class="graficos">
+                <div class="grafico">
+                    <a href="boletim.html">
+                        <h3>Desempenho em Provas</h3>
+                    </a>
+                    <canvas id="graficoProvas"></canvas>
+                </div>
+                <div class="grafico">
+                    <a href="presenca.html">
+                        <h3>Presença Aulas</h3>
+                    </a>
+                    <canvas id="graficoPresenca"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctxProvas = document.getElementById('graficoProvas');
+        const ctxPresenca = document.getElementById('graficoPresenca');
+
+        new Chart(ctxProvas, {
+            type: 'doughnut',
+            data: {
+                labels: ['Acertos', 'Erros'],
+                datasets: [{
+                    data: [90, 10],
+                    backgroundColor: ['#004aad', '#ffbd59']
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '60%'
+            }
+        });
+
+        new Chart(ctxPresenca, {
+            type: 'doughnut',
+            data: {
+                labels: ['Presenças', 'Faltas'],
+                datasets: [{
+                    data: [85, 15],
+                    backgroundColor: ['#004aad', '#ffbd59']
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '60%'
+            }
+        });
+    </script>
+</body>
+</html>

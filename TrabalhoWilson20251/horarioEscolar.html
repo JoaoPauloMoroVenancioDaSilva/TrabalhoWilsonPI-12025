@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Horário Escolar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .menu-total {
+            width: 20%;
+            background-color: #d3d3d3;
+        }
+
+        .menu-lateral {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .botoes button {
+            padding: 10px;
+            background-color: #004aad;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .botoes button.active,
+        .botoes button:hover {
+            background-color: #ffbd59;
+            color: black;
+            font-weight: bold;
+        }
+
+        .botoes button a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .conteudo {
+            width: 80%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 4px solid rgb(0, 6, 128);
+            background-color: white;
+        }
+
+        .voltar {
+            align-self: flex-start;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .voltar a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .imagem-horario {
+            width: auto;
+            height: 100%;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Menu lateral -->
+        <div class="menu-total">
+            <nav class="menu-lateral">
+                <div class="logo">
+                    <img src="ImagensLogin/logoSchoolWilson.png" alt="Logo da escola">
+                </div>
+                <div class="botoes">
+                    <button><a href="telaInicial.html">Tela Inicial</a></button>
+                    <button><a href="boletim.html">Ver Boletim</a></button>
+                    <button><a href="presenca.html">Presença em Aulas</a></button>
+                    <button><a href="calendario.html">Calendário Escolar</a></button>
+                    <button><a href="planoDeEnsino.html">Plano de Ensino</a></button>
+                    <button class="active"><a href="#">Horário Escolar</a></button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Conteúdo da direita -->
+        <section class="conteudo">
+            <img src="ImagensLogin/horario.png" alt="Horário Escolar" class="imagem-horario">
+        </section>
+    </div>
+</body>
+</html>

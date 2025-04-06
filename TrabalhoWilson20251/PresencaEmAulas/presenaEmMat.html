@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presença em Aulas</title>
+    <link rel="stylesheet" href="presencaEmMateria.css">
+</head>
+<body>
+    <div class="container">
+        <section class="menu-total">
+            <nav class="menu-lateral">
+                <section class="logo">
+                    <img src="../ImagensLogin/logoSchoolWilson.png" alt="Logo da escola">
+                </section>
+                <section class="botoes-total">
+                    <section class="botoes">
+                        <a href="../telaInicial.html"><button>Tela Inicial</button></a>
+                        <button><a href="../boletim.html">Ver Boletim</a></button>
+                        <a href="../presenca.html"><button class="active">Presença em Aulas</button></a>
+                        <a href="../calendario.html"><button>Calendário Escolar</button></a>
+                        <a href="../planoDeEnsino.html"><button>Plano de Ensino</button></a>
+                        <a href="../horarioEscolar.html"><button>Horário Escolar</button></a>
+                    </section>
+                </section>
+            </nav>
+        </section>
+
+        <section class="conteudo">
+            <h1>Presença em Aulas</h1>
+
+            <div class="info">
+                <div class="dados-aluno">
+                    <p><strong>Aluno Shrek Gonzalez</strong></p>
+                    <p><strong>Professor: Reginaldo</strong></p>
+                </div>
+                <div class="dados-materia">
+                    <p><strong>Matéria: Matemática</strong></p>
+                    <p><strong>Presença: <span class="presenca">90%</span></strong></p>
+                    <p><strong>Faltas: <span class="faltas">10%</span></strong></p>
+                </div>
+            </div>
+
+            <div class="graficos">
+                <canvas id="graficoPizza" width="300" height="300"></canvas>
+                <img src="../ImagensLogin/calendario.png" alt="Calendário do mês" class="calendario">
+            </div>
+        </section>
+    </div>
+</body>
+
+<!-- Importa o Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Script para criar o gráfico -->
+<script>
+    const ctx = document.getElementById('graficoPizza').getContext('2d');
+    const graficoPizza = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Faltas', 'Presença'],
+            datasets: [{
+                label: 'Presença em Aulas',
+                data: [10, 90],
+                backgroundColor: ['#e74c3c', '#2ecc71'], // vermelho e verde
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.parsed}%`;
+                        }
+                    }
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendário Escolar</title>
+    <link rel="stylesheet" href="calendario.css" />
+</head>
+<body>
+    <div class="container">
+        <section class="menu-total">
+            <nav class="menu-lateral">
+                <section class="logo">
+                    <img src="ImagensLogin/logoSchoolWilson.png" alt="Logo da escola" />
+                </section>
+                <section class="botoes-total">
+                    <section class="botoes">
+                        <a href="telaInicial.html"><button>Tela Inicial</button></a>
+                        <a href="boletim.html"><button >Ver Boletim</button></a>
+                        <a href="presenca.html"><button>Presença em Aulas</button></a>
+                        <a href="calendario.html"><button class="active">Calendário Escolar</button></a>
+                        <a href="planoDeEnsino.html"><button>Plano de Ensino</button></a>
+                        <a href="horarioEscolar.html"><button>Horário Escolar</button></a>
+                    </section>
+                </section>
+            </nav>
+        </section>
+
+        <section class="conteudo">
+            <header>
+                <h1>Calendário Escolar - School - 2025</h1>
+            </header>
+
+            <main>
+                <section class="calendar-container">
+                    <div class="month-selector">
+                        <button class="prev">&#60;</button>
+                        <h2>Janeiro</h2>
+                        <button class="next">&#62;</button>
+                    </div>
+
+                    <table class="calendar">
+                        <thead>
+                            <tr>
+                                <th>Segunda-feira</th>
+                                <th>Terça-feira</th>
+                                <th>Quarta-feira</th>
+                                <th>Quinta-feira</th>
+                                <th>Sexta-feira</th>
+                                <th>Sábado</th>
+                                <th>Domingo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="ferias">1</td>
+                                <td class="ferias">2</td>
+                                <td class="ferias">3</td>
+                                <td class="nao-aula">4</td>
+                                <td class="nao-aula">5</td>
+                            </tr>
+                            <tr>
+                                <td class="ferias">6</td>
+                                <td class="ferias">7</td>
+                                <td class="ferias">8</td>
+                                <td class="ferias">9</td>
+                                <td class="ferias">10</td>
+                                <td class="nao-aula">11</td>
+                                <td class="nao-aula">12</td>
+                            </tr>
+                            <tr>
+                                <td class="aula">13</td>
+                                <td class="aula">14</td>
+                                <td class="aula">15</td>
+                                <td class="aula">16</td>
+                                <td class="aula">17</td>
+                                <td class="nao-aula">18</td>
+                                <td class="nao-aula">19</td>
+                            </tr>
+                            <tr>
+                                <td class="aula">20</td>
+                                <td class="aula">21</td>
+                                <td class="aula">22</td>
+                                <td class="aula">23</td>
+                                <td class="aula">24</td>
+                                <td class="nao-aula">25</td>
+                                <td class="nao-aula">26</td>
+                            </tr>
+                            <tr>
+                                <td class="aula">27</td>
+                                <td class="aula">28</td>
+                                <td class="aula">29</td>
+                                <td class="aula">30</td>
+                                <td class="recesso">31</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="legend">
+                        <span class="ferias">Férias escolares</span>
+                        <span class="nao-aula">Não há aula</span>
+                        <span class="aula">Aula normal</span>
+                        <span class="recesso">Recesso</span>
+                    </div>
+                </section>
+            </main>
+        </section>
+    </div>
+</body>
+</html>

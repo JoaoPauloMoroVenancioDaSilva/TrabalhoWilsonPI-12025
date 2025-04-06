@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.menu-total {
+    width: 20%;
+    background-color: #d3d3d3;
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.botoes button {
+    padding: 10px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.botoes button.active,
+.botoes button:hover {
+    background-color: #ffbd59;
+    color: black;
+    font-weight: bold;
+}
+
+.botoes button a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.conteudo {
+    width: 80%;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.banner img {
+    width: 1195px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.graficos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.grafico {
+    text-align: center;
+    width: 40%;
+}
+
+a {
+    color: inherit; /* Herdar a cor do pai (a <td>) */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,66 @@
+.voltar {
+    display: inline-block;
+    margin: 10px 0 10px 10px;
+    font-size: 16px;
+    color: #004aad;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+.plano-ensino {
+    background-color: #e5e5e5;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cabecalho {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info-geral {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    background-color: #f1f1f1;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.temas {
+    background-color: #d9d9d9;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.temas ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.desenvolvimento {
+    background-color: white;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.desenvolvimento p {
+    margin: 10px 0;
+}
+
+.desenvolvimento a {
+    font-weight: bold;
+    color: #c00;
+    text-decoration: underline;
+}
